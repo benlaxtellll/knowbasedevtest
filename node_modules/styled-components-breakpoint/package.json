@@ -1,0 +1,52 @@
+{
+  "name": "styled-components-breakpoint",
+  "repository": "jameslnewell/styled-components-breakpoint",
+  "version": "2.1.1",
+  "description": "Utility functions for creating breakpoints in `styled-components` 💅.",
+  "keywords": [
+    "react",
+    "styled-components",
+    "breakpoint",
+    "breakpoints",
+    "media",
+    "style",
+    "tablet",
+    "desktop"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "jsnext:main": "dist/esm/index.js",
+  "files": [
+    "dist/cjs",
+    "dist/esm"
+  ],
+  "peerDependencies": {
+    "styled-components": ">= 1"
+  },
+  "devDependencies": {
+    "@tradie/react-component-scripts": "^1.0.0-alpha.a573b72a",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
+    "jest-styled-components": "^4.11.0-1",
+    "react": "^16.2.0",
+    "react-create-component-from-tag-prop": "^1.3.1",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.1.6"
+  },
+  "scripts": {
+    "clean": "tradie clean",
+    "lint": "tradie lint",
+    "build": "tradie build",
+    "watch": "tradie build --watch",
+    "dev": "tradie dev",
+    "test": "tradie test",
+    "deploy": "gh-pages -d \"./dist/example\"",
+    "prepublishOnly": "yarn run clean && yarn run build && yarn run test",
+    "postpublish": "yarn run deploy",
+    "precommit": "yarn run test"
+  },
+  "license": "MIT"
+}

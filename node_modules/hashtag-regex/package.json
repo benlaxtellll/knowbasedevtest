@@ -1,0 +1,49 @@
+{
+  "name": "hashtag-regex",
+  "version": "2.1.0",
+  "description": "A regular expression to match hashtag identifiers as per the Unicode Standard.",
+  "homepage": "https://mths.be/hashtag-regex",
+  "main": "index.js",
+  "keywords": [
+    "unicode",
+    "regex",
+    "regexp",
+    "regular expressions",
+    "code points",
+    "symbols",
+    "characters",
+    "emoji",
+    "hashtag",
+    "hashtags"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathiasbynens/hashtag-regex.git"
+  },
+  "bugs": "https://github.com/mathiasbynens/hashtag-regex/issues",
+  "files": [
+    "LICENSE-MIT.txt",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "babel src -d .; node script/inject-sequences.js",
+    "clean": "rm -f -- index.js",
+    "prepublish": "npm run clean && npm run build",
+    "test": "npm run build && mocha",
+    "test:watch": "npm run test -- --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/plugin-proposal-unicode-property-regex": "7.4.4",
+    "@babel/preset-env": "7.5.5",
+    "mocha": "^6.2.0",
+    "regenerate": "^1.4.0",
+    "unicode-12.1.0": "^0.8.0"
+  }
+}
